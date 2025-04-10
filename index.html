@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,46 +27,9 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; scroll-behavior: smooth; }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    nav .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    nav .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-
-    nav .nav-links a:hover {
-      color: #f0c040;
-    }
+    body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; }
 
     .slide {
-      margin-top: 80px;
       margin-bottom: 2rem;
       opacity: 0;
       transform: translateY(30px);
@@ -116,7 +79,7 @@
     .instagram-btn {
       position: fixed;
       top: 20px;
-      left: 20px;
+      right: 20px;
       z-index: 999;
     }
 
@@ -124,28 +87,11 @@
       width: 40px;
       height: 40px;
     }
-
-    section#contact {
-      padding: 2rem;
-      background: #f8f8f8;
-      scroll-margin-top: 80px;
-    }
   </style>
 </head>
 <body>
 
-<!-- ✅ NAVBAR -->
-<nav>
-  <div class="logo">Tipple Works</div>
-  <div class="nav-links">
-    <a href="#contact">Contact</a>
-    <a href="#top">Top</a>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohan.dhirwani@tippleworks.com" target="_blank">Email</a>
-    <a href="https://www.instagram.com/tippleworksco/" target="_blank">Instagram</a>
-  </div>
-</nav>
-
-<!-- ✅ Slides -->
+<!-- Slides -->
 <section class="slide"><img src="slide1.jpg" alt="Slide 1" loading="lazy" /></section>
 <section class="slide"><img src="slide2.jpg" alt="Slide 2" loading="lazy" /></section>
 <section class="slide"><img src="slide3.jpg" alt="Slide 3" loading="lazy" /></section>
@@ -180,18 +126,18 @@
 <section class="slide"><img src="slide32.jpg" alt="Slide 32" loading="lazy" /></section>
 <section class="slide"><img src="slide33.jpg" alt="Slide 33" loading="lazy" /></section>
 
-<!-- ✅ CTA Gmail -->
+<!-- CTA Gmail -->
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohan.dhirwani@tippleworks.com" class="cta" target="_blank">Let’s Create →</a>
 
-<!-- ✅ Instagram Floating -->
+<!-- Instagram Floating -->
 <a class="instagram-btn" href="https://www.instagram.com/tippleworksco/" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
 </a>
 
-<!-- ✅ Back to Top -->
-<a href="#top" class="back-to-top">↑ Top</a>
+<!-- Back to Top -->
+<a href="#" class="back-to-top">↑ Top</a>
 
-<!-- ✅ Scroll Animations -->
+<!-- Scroll Animations -->
 <script>
   const slides = document.querySelectorAll('.slide');
   const observer = new IntersectionObserver(entries => {
@@ -208,8 +154,8 @@
   });
 </script>
 
-<!-- ✅ Contact Form -->
-<section id="contact">
+<!-- Contact Form -->
+<section id="contact" style="padding: 2rem; background: #f8f8f8;">
   <h2 style="margin-bottom: 1rem;">Let’s Talk</h2>
   <form action="https://formspree.io/f/myzellok" method="POST" style="max-width: 500px;">
     <label>
