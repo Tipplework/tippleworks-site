@@ -24,6 +24,21 @@
     }
     .cta:hover { background: #444; }
   </style>
+
+  <meta name="description" content="Tipple Works Co. - Creative alcohol marketing agency">
+  <meta property="og:title" content="Tipple Works Co.">
+  <meta property="og:description" content="Explore our creative deck showcasing what Tipple Works Co. does best – elevating alcohol brands.">
+  <meta property="og:image" content="https://tippleworks.com/slide1.jpg">
+  <meta property="og:url" content="https://tippleworks.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
 </head>
 <body>
 
@@ -62,6 +77,38 @@
 <section class="slide"><img src="slide33.jpg" alt="Slide 33"></section>
 
 <a href="mailto:srishti.bhatia@tippleworks.com" class="cta">Let’s Create →</a>
+
+
+<!-- Floating Instagram Icon -->
+<a href="https://www.instagram.com/tippleworksco/" target="_blank" style="position:fixed;top:20px;right:20px;z-index:999;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="40" height="40" alt="Instagram" />
+</a>
+
+<!-- Email Now Button -->
+<a href="mailto:rohan.dhirwani@tippleworks.com" class="cta" style="bottom:80px;background:#f04;">Email Now</a>
+
+<!-- Back to Top -->
+<a href="#" class="cta" style="bottom:140px;background:#333;">↑ Top</a>
+
+<!-- Scroll Animations -->
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  slides.forEach(slide => {
+    slide.style.opacity = 0;
+    slide.style.transform = 'translateY(30px)';
+    slide.style.transition = 'all 0.6s ease-out';
+    observer.observe(slide);
+  });
+</script>
 
 </body>
 </html>
