@@ -88,87 +88,45 @@
     }
 
     .hero {
-      background: #000;
-      color: #fff;
-      padding: 6rem 2rem;
-      text-align: center;
-    }
+  background: #000;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
 
-    .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-    }
-
-    .hero a {
-      background: #f6c301;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 14px 30px;
-      border-radius: 50px;
-      display: inline-block;
-      transition: 0.3s ease;
-    }
-
-    .hero a:hover {
-      background: #ffc800;
-    }
-.hero img {
-  max-width: 300px;
-  width: 100%;
+.hero-logo {
+  width: 180px;
+  height: auto;
+  animation: fadeInScale 1.2s ease forwards;
   opacity: 0;
-  animation: fadeIn 2s ease forwards;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.hero img {
-  max-width: 600px; /* doubled from 300px */
-  width: 100%;
-  opacity: 0;
-  animation: fadeIn 2s ease forwards;
-}
-
-/* Responsive scaling for mobile */
-@media (max-width: 768px) {
-  .hero img {
-    max-width: 300px; /* fallback for smaller screens */
-  }
-
-  .hero a {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Updated button size for all screens */
 .hero a {
+  margin-top: 2rem;
+  display: inline-block;
   background: #f6c301;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 25px; /* smaller than before */
-  font-size: 1rem;
+  padding: 12px 28px;
   border-radius: 50px;
-  display: inline-block;
+  font-size: 0.9rem;
   transition: 0.3s ease;
+}
+
+.hero a:hover {
+  background: #ffc800;
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
   </style>
 </head>
@@ -177,12 +135,11 @@
 <!-- Anchor for Home -->
 <div id="top"></div>
 
-<!-- ✅ Hero Section: Logo + Button -->
-<section class="hero" style="background: #000; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-  <img src="logo.png" alt="Tipple Works Co. Logo" style="width: 280px; max-width: 80%; margin-bottom: 2rem;" />
-  <a href="#contact" style="background: #f6c301; color: #000; text-decoration: none; font-weight: bold; padding: 14px 30px; border-radius: 50px; font-size: 1rem; transition: background 0.3s ease;">
-    Let’s Collaborate
-  </a>
+<!-- ✅ Hero Section with Centered Logo and Portfolio Button -->
+<section class="hero">
+  <img src="logo.png" alt="Tipple Works Logo" class="hero-logo" />
+  <br />
+  <a href="https://drive.google.com/file/d/https://drive.google.com/drive/folders/1k_IXMx8JI1lqzwOKYDw_hAiuGj9oqvKV/view" target="_blank">Portfolio</a>
 </section>
 
 <!-- ✅ Services Grid -->
