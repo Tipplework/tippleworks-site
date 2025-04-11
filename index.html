@@ -29,27 +29,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; scroll-behavior: smooth; }
 
-    .hero {
-      position: relative;
-      height: 100vh;
-      background: url('Heroimage.jpg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-logo {
-      width: 300px;
-      opacity: 0;
-      animation: fadeIn 2s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
     .slide {
       margin-bottom: 2rem;
       opacity: 0;
@@ -107,6 +86,41 @@
       width: 40px;
       height: 40px;
     }
+
+    .hero {
+      background: #000;
+      color: #fff;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .hero a {
+      background: #f6c301;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #ffc800;
+    }
   </style>
 </head>
 <body>
@@ -114,12 +128,13 @@
 <!-- Anchor for Home -->
 <div id="top"></div>
 
-<!-- ✅ Hero Section with Background Image and Animated Logo -->
+<!-- ✅ Hero Section -->
 <section class="hero">
-  <img src="logo.png" alt="Tipple Works Co. Logo" class="hero-logo" />
+  <h1>We Make Alcohol Brands Unmissable</h1>
+  <p>From strategy to sizzle, Tipple Works builds alcohol brands that get people talking. Packaging, content, strategy, and experiences that pour creativity into every sip.</p>
+  <a href="#contact">Let's Collaborate</a>
 </section>
 
-<!-- ✅ Rest of the Website Starts Here (No Changes) -->
 <!-- ✅ Services Grid -->
 <section id="services" style="padding: 4rem 2rem; background: #fff;">
   <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2.5rem;">What We Do</h2>
@@ -151,8 +166,66 @@
   </div>
 </section>
 
-<!-- ✅ Clients, Testimonials, Contact, Footer, Floating Buttons, Scroll Animation -->
-<!-- Keep all these sections below just as you already have them. No edits required. -->
+<!-- ✅ Clients Section -->
+<section id="clients" style="padding: 4rem 2rem; background: #fafafa;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Brands We've Worked With</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
+    <img src="client1.png" alt="Client 1" style="height: 50px; max-width: 120px; object-fit: contain;">
+    <img src="client2.png" alt="Client 2" style="height: 50px; max-width: 120px; object-fit: contain;">
+    <img src="client3.png" alt="Client 3" style="height: 50px; max-width: 120px; object-fit: contain;">
+    <img src="client4.png" alt="Client 4" style="height: 50px; max-width: 120px; object-fit: contain;">
+    <img src="client5.png" alt="Client 5" style="height: 50px; max-width: 120px; object-fit: contain;">
+  </div>
+</section>
+
+<!-- ✅ Testimonials Section -->
+<section id="testimonials" style="padding: 4rem 2rem; background: #fff;">
+  <h2 style="text-align:center; font-size: 2rem; margin-bottom: 3rem;">What Our Clients Say</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+    <div style="flex: 1 1 300px; padding: 2rem; border: 1px solid #eee; border-radius: 10px; background: #fafafa;">
+      <p style="font-style: italic;">“Tipple Works helped us break into the Indian market with a story that truly resonated. Their ideas are bold and their execution is seamless.”</p>
+      <p style="margin-top: 1rem; font-weight: bold;">– Alex J., Founder, Craft Spirits UK</p>
+    </div>
+    <div style="flex: 1 1 300px; padding: 2rem; border: 1px solid #eee; border-radius: 10px; background: #fafafa;">
+      <p style="font-style: italic;">“From packaging to performance campaigns, they absolutely nailed our vibe. We've never looked sharper as a brand.”</p>
+      <p style="margin-top: 1rem; font-weight: bold;">– Neha R., Marketing Head, Sober Soda Co.</p>
+    </div>
+    <div style="flex: 1 1 300px; padding: 2rem; border: 1px solid #eee; border-radius: 10px; background: #fafafa;">
+      <p style="font-style: italic;">“They understand alcohol marketing like nobody else. Fast, smart and always on point.”</p>
+      <p style="margin-top: 1rem; font-weight: bold;">– Siddharth M., Brand Lead, The Dram District</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Modernized Contact Form -->
+<section id="contact" style="padding: 4rem 2rem; background: #f8f8f8; font-family: sans-serif;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Let’s Talk</h2>
+  <form action="https://formspree.io/f/myzellok" method="POST" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);">
+    <label for="email" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Email Address</label>
+    <input type="email" id="email" name="email" required
+      style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;" />
+    <label for="message" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Your Message</label>
+    <textarea id="message" name="message" required rows="6"
+      style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+    <button type="submit"
+      style="margin-top: 1.5rem; background-color: #000; color: #fff; padding: 0.9rem 2rem; font-size: 1rem; font-weight: bold; border: none; border-radius: 50px; cursor: pointer; transition: background-color 0.3s ease;">
+      Send →
+    </button>
+  </form>
+</section>
+
+<!-- ✅ Final Footer -->
+<footer style="background: #000; color: #fff; padding: 3rem 2rem; text-align: center;">
+  <img src="logo.png" alt="Tipple Works Logo" style="height: 50px; margin-bottom: 1.5rem;" />
+  <div style="margin-bottom: 1.5rem;">
+    <a href="#top" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Home</a>
+    <a href="#services" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Services</a>
+    <a href="#clients" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Clients</a>
+    <a href="#contact" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Contact</a>
+    <a href="https://www.instagram.com/tippleworksco/" target="_blank" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Instagram</a>
+  </div>
+  <p style="font-size: 0.9rem; color: #aaa;">© 2024 Tipple Works Co. All rights reserved.</p>
+</footer>
 
 <!-- ✅ Floating Buttons -->
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohan.dhirwani@tippleworks.com" class="cta" target="_blank">Let’s Create →</a>
