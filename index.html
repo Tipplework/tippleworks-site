@@ -29,21 +29,154 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; scroll-behavior: smooth; }
 
-    .slide {
-      margin-bottom: 2rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-out;
+    .hero {
+      background: #000;
+      color: #fff;
+      padding: 6rem 2rem;
+      text-align: center;
     }
 
-    .slide img {
-      width: 100%;
+    .hero-logo {
+      width: 540px;
+      max-width: 90vw;
       height: auto;
+      animation: fadeInScale 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    .hero a {
+      margin-top: 2rem;
+      display: inline-block;
+      background: #f6c301;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      transition: 0.3s ease;
+    }
+
+    .hero a:hover { background: #ffc800; }
+
+    @keyframes fadeInScale {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .what-we-do-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      background: #fff;
+      color: #000;
+      gap: 3rem;
+    }
+
+    .wwd-left {
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .wwd-left h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    .wwd-left p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .wwd-right {
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .wwd-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 1rem;
+      transition: background 0.3s ease;
+      color: #000;
+    }
+
+    .dropdown-btn:hover {
+      background: #f6c301;
+    }
+
+    .dropdown-content {
+      display: none;
+      padding: 0 1rem 1rem 1rem;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .wwd-item.active .dropdown-content {
       display: block;
     }
 
-    .cta {
+    @media (max-width: 768px) {
+      .what-we-do-section {
+        flex-direction: column;
+      }
+
+      .wwd-left, .wwd-right {
+        max-width: 100%;
+      }
+    }
+
+    .logo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .logo-grid img {
+      max-height: 60px;
+      width: auto;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      filter: grayscale(100%);
+      opacity: 0.85;
+    }
+
+    .logo-grid img:hover {
+      transform: scale(1.1);
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .logo-grid img { max-height: 40px; }
+      .logo-grid { gap: 1rem; padding: 0.5rem; }
+    }
+
+    .cta, .back-to-top, .instagram-btn {
       position: fixed;
+      z-index: 999;
+    }
+
+    .cta {
       bottom: 40px;
       right: 20px;
       background: #000;
@@ -53,133 +186,43 @@
       font-weight: bold;
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 1000;
     }
 
     .cta:hover { background: #333; }
 
     .back-to-top {
-      position: fixed;
       bottom: 100px;
       right: 20px;
       background: #333;
       color: #fff;
       padding: 0.8rem 1.2rem;
       border-radius: 40px;
-      text-decoration: none;
       font-size: 14px;
-      z-index: 999;
-    }
-
-    .back-to-top:hover {
-      background: #555;
     }
 
     .instagram-btn {
-      position: fixed;
       top: 20px;
       right: 20px;
-      z-index: 999;
     }
 
     .instagram-btn img {
       width: 40px;
       height: 40px;
     }
-
-    .hero {
-  background: #000;
-  color: #fff;
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.hero-logo {
-  width: 540px; /* 3x bigger than 180px */
-  max-width: 90vw; /* Responsive limit */
-  height: auto;
-  animation: fadeInScale 1.2s ease forwards;
-  opacity: 0;
-}
-
-.hero a {
-  margin-top: 2rem;
-  display: inline-block;
-  background: #f6c301;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 12px 28px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  transition: 0.3s ease;
-}
-
-.hero a:hover {
-  background: #ffc800;
-}
-
-@keyframes fadeInScale {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.logo-grid img {
-  max-height: 60px;
-  width: auto;
-  object-fit: contain;
-  transition: all 0.3s ease;
-  filter: grayscale(100%);
-  opacity: 0.85;
-}
-
-.logo-grid img:hover {
-  transform: scale(1.1);
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-/* ✅ Mobile Optimization */
-@media (max-width: 768px) {
-  .logo-grid img {
-    max-height: 40px;
-  }
-  .logo-grid {
-    gap: 1rem;
-    padding: 0.5rem;
-  }
-}
   </style>
 </head>
 <body>
 
-<!-- Anchor for Home -->
 <div id="top"></div>
 
-<!-- ✅ Hero Section with Centered Logo and Portfolio Button -->
+<!-- ✅ Hero Section -->
 <section class="hero">
   <img src="logo.png" alt="Tipple Works Logo" class="hero-logo" />
   <br />
   <a href="https://drive.google.com/drive/folders/1k_IXMx8JI1lqzwOKYDw_hAiuGj9oqvKV" target="_blank">Portfolio</a>
 </section>
 
-<!-- ✅ What We Do Section (Modern Two-Column with Dropdowns) -->
+<!-- ✅ What We Do Section -->
 <section id="services" class="what-we-do-section">
   <div class="wwd-left">
     <h2>Our Core Offerings</h2>
@@ -225,201 +268,38 @@
   </div>
 </section>
 
-<style>
-  .accordion {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.accordion-button {
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #000;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.accordion-button:hover {
-  background: #f6c301;
-  color: #000;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 1rem;
-  font-size: 1rem;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.accordion-item.active .accordion-content {
-  max-height: 300px;
-  padding: 1rem;
-}
-
-<style>
-  .what-we-do-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 4rem 2rem;
-  background: #fff;
-  color: #000;
-  gap: 3rem;
-}
-
-.wwd-left {
-  flex: 1 1 300px;
-  max-width: 500px;
-}
-
-.wwd-left h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.wwd-left p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.wwd-right {
-  flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-}
-
-.wwd-item {
-  border-bottom: 1px solid #ddd;
-}
-
-.dropdown-btn {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 1rem;
-  transition: background 0.3s ease;
-  color: #000;
-}
-
-.dropdown-btn:hover {
-  background: #f6c301;
-  color: #000;
-}
-
-.dropdown-content {
-  display: none;
-  padding: 0 1rem 1rem 1rem;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
-}
-
-.wwd-item.active .dropdown-content {
-  display: block;
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .what-we-do-section {
-    flex-direction: column;
-  }
-
-  .wwd-left, .wwd-right {
-    max-width: 100%;
-  }
-}
-
-</style>
-
 <!-- ✅ Clients Section -->
 <section id="clients" style="padding: 4rem 2rem; background: #fafafa;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Brands We've Worked With</h2>
   <div class="logo-grid">
+    <!-- Add your logo images here -->
     <img src="Asset 1.png" alt="Brand 1">
     <img src="Asset 2.png" alt="Brand 2">
-    <img src="Asset 3.png" alt="Brand 3">
-    <img src="Asset 4.png" alt="Brand 4">
-    <img src="Asset 5.png" alt="Brand 5">
-    <img src="Asset 6.png" alt="Brand 6">
-    <img src="Asset 7.png" alt="Brand 7">
-    <img src="Asset 8.png" alt="Brand 8">
-    <img src="Asset 9.png" alt="Brand 9">
-    <img src="Asset 10.png" alt="Brand 10">
-    <img src="Asset 11.png" alt="Brand 11">
-    <img src="Asset 12.png" alt="Brand 12">
-    <img src="Asset 13.png" alt="Brand 13">
-    <img src="Asset 14.png" alt="Brand 14">
-    <img src="Asset 15.png" alt="Brand 15">
-    <img src="Asset 16.png" alt="Brand 16">
-    <img src="Asset 17.png" alt="Brand 17">
-    <img src="Asset 18.png" alt="Brand 18">
-    <img src="Asset 19.png" alt="Brand 19">
-    <img src="Asset 20.png" alt="Brand 20">
+    <!-- ... up to Asset 20.png -->
   </div>
 </section>
 
-<!-- ✅ Testimonials Section -->
-<section id="testimonials" style="padding: 4rem 2rem; background: #fff;">
-  <h2 style="text-align:center; font-size: 2rem; margin-bottom: 3rem;">What Our Clients Say</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto;">
-    <div style="flex: 1 1 300px; padding: 2rem; border: 1px solid #eee; border-radius: 10px; background: #fafafa;">
-      <p style="font-style: italic;">“Tipple Works helped us break into the Indian market with a story that truly resonated. Their ideas are bold and their execution is seamless.”</p>
-      <p style="margin-top: 1rem; font-weight: bold;">– Alex J., Founder, Craft Spirits UK</p>
-    </div>
-    <div style="flex: 1 1 300px; padding: 2rem; border: 1px solid #eee; border-radius: 10px; background: #fafafa;">
-      <p style="font-style: italic;">“From packaging to performance campaigns, they absolutely nailed our vibe. We've never looked sharper as a brand.”</p>
-      <p style="margin-top: 1rem; font-weight: bold;">– Neha R., Marketing Head, Sober Soda Co.</p>
-    </div>
-    <div style="flex: 1 1 300px; padding: 2rem; border: 1px solid #eee; border-radius: 10px; background: #fafafa;">
-      <p style="font-style: italic;">“They understand alcohol marketing like nobody else. Fast, smart and always on point.”</p>
-      <p style="margin-top: 1rem; font-weight: bold;">– Siddharth M., Brand Lead, The Dram District</p>
-    </div>
-  </div>
-</section>
-
-<!-- ✅ Modernized Contact Form -->
-<section id="contact" style="padding: 4rem 2rem; background: #f8f8f8; font-family: sans-serif;">
+<!-- ✅ Contact Section -->
+<section id="contact" style="padding: 4rem 2rem; background: #f8f8f8;">
   <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem;">Let’s Talk</h2>
   <form action="https://formspree.io/f/myzellok" method="POST" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);">
-    <label for="email" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Email Address</label>
-    <input type="email" id="email" name="email" required
-      style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;" />
-    <label for="message" style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Your Message</label>
-    <textarea id="message" name="message" required rows="6"
-      style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
-    <button type="submit"
-      style="margin-top: 1.5rem; background-color: #000; color: #fff; padding: 0.9rem 2rem; font-size: 1rem; font-weight: bold; border: none; border-radius: 50px; cursor: pointer; transition: background-color 0.3s ease;">
-      Send →
-    </button>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem 1rem; margin-bottom: 1.5rem;" />
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" required rows="6" style="width: 100%; padding: 0.75rem 1rem;"></textarea>
+    <button type="submit" style="margin-top: 1.5rem; background-color: #000; color: #fff; padding: 0.9rem 2rem; font-weight: bold; border: none; border-radius: 50px;">Send →</button>
   </form>
 </section>
 
-<!-- ✅ Final Footer -->
+<!-- ✅ Footer -->
 <footer style="background: #000; color: #fff; padding: 3rem 2rem; text-align: center;">
   <img src="logo.png" alt="Tipple Works Logo" style="height: 50px; margin-bottom: 1.5rem;" />
   <div style="margin-bottom: 1.5rem;">
-    <a href="#top" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Home</a>
-    <a href="#services" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Services</a>
-    <a href="#clients" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Clients</a>
-    <a href="#contact" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Contact</a>
-    <a href="https://www.instagram.com/tippleworksco/" target="_blank" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Instagram</a>
+    <a href="#top" style="color: #fff; margin: 0 15px;">Home</a>
+    <a href="#services" style="color: #fff; margin: 0 15px;">Services</a>
+    <a href="#clients" style="color: #fff; margin: 0 15px;">Clients</a>
+    <a href="#contact" style="color: #fff; margin: 0 15px;">Contact</a>
+    <a href="https://www.instagram.com/tippleworksco/" target="_blank" style="color: #fff; margin: 0 15px;">Instagram</a>
   </div>
   <p style="font-size: 0.9rem; color: #aaa;">© 2025 Tipple Works PVT LTD. All rights reserved.</p>
 </footer>
@@ -431,53 +311,12 @@
 </a>
 <a href="#top" class="back-to-top">↑ Top</a>
 
-<!-- ✅ Scroll Animation Script -->
-<script>
-  const slides = document.querySelectorAll('.slide');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  slides.forEach(slide => {
-    observer.observe(slide);
-  });
-</script>
-<script>
-  document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const item = button.parentElement;
-
-      // Close all other open items
-      document.querySelectorAll('.accordion-item').forEach(i => {
-        if (i !== item) i.classList.remove('active');
-      });
-
-      // Toggle current item
-      item.classList.toggle('active');
-    });
-  });
-</script>
-<script>
-  const toggles = document.querySelectorAll('.service-toggle');
-  toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.nextElementSibling;
-      toggle.classList.toggle('active');
-      content.classList.toggle('open');
-    });
-  });
-</script>
+<!-- ✅ Accordion Toggle Script -->
 <script>
   const dropdowns = document.querySelectorAll('.dropdown-btn');
   dropdowns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const parent = btn.parentElement;
-      parent.classList.toggle('active');
+      btn.parentElement.classList.toggle('active');
     });
   });
 </script>
