@@ -133,6 +133,43 @@
     opacity: 1;
   }
 }
+.hero img {
+  max-width: 600px; /* doubled from 300px */
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Responsive scaling for mobile */
+@media (max-width: 768px) {
+  .hero img {
+    max-width: 300px; /* fallback for smaller screens */
+  }
+
+  .hero a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Updated button size for all screens */
+.hero a {
+  background: #f6c301;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px; /* smaller than before */
+  font-size: 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
   </style>
 </head>
 <body>
