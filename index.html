@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tipple Works Co. Deck</title>
 
-  <!-- Google Analytics -->
+  <!-- ✅ Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSZN4E7TRS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +17,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- SEO & Social -->
+  <!-- SEO & Social Preview -->
   <meta name="description" content="Tipple Works Co. - Creative alcohol marketing agency">
   <meta property="og:title" content="Tipple Works Co.">
   <meta property="og:description" content="Explore our creative deck showcasing what Tipple Works Co. does best – elevating alcohol brands.">
@@ -27,65 +27,12 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #111; scroll-behavior: smooth; }
+    body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; scroll-behavior: smooth; }
 
     .hero {
       background: url('main-page.jpg') center center / cover no-repeat;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero a {
-      background: #f6c301;
-      color: #000;
-      padding: 12px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .hero a:hover { background: #ffc800; }
-
-    .slide {
-      margin-bottom: 2rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-out;
-    }
-
-    .slide img {
       width: 100%;
-      height: auto;
-      display: block;
-      loading: lazy;
     }
 
     .cta {
@@ -102,6 +49,8 @@
       z-index: 1000;
     }
 
+    .cta:hover { background: #333; }
+
     .back-to-top {
       position: fixed;
       bottom: 100px;
@@ -113,6 +62,10 @@
       text-decoration: none;
       font-size: 14px;
       z-index: 999;
+    }
+
+    .back-to-top:hover {
+      background: #555;
     }
 
     .instagram-btn {
@@ -127,98 +80,59 @@
       height: 40px;
     }
 
-    section {
-      padding: 4rem 2rem;
-    }
-
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-
-    footer a:hover { color: #f6c301; }
-
-    .contact-form {
-      max-width: 500px;
-      margin: auto;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
+    section.slide img {
       width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      background: #000;
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background: #333;
+      height: auto;
+      display: block;
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
 
-<!-- ✅ Hero Section -->
-<section class="hero" id="top">
-  <div class="hero-content">
-    <h1>We Make Alcohol Brands Unmissable</h1>
-    <p>Strategy. Packaging. Content. Ads. The whole bottle.</p>
-    <a href="#contact">Let’s Collaborate</a>
-  </div>
-</section>
+<!-- ✅ Hero Fullscreen Image -->
+<section class="hero" id="top"></section>
 
-<!-- ✅ Slides -->
+<!-- ✅ Slides Start from Slide 2 -->
 <section class="slide"><img src="slide2.jpg" alt="Slide 2" loading="lazy" /></section>
-<!-- Add more slides here as needed -->
-
-<!-- ✅ Contact Form -->
-<section id="contact" style="background: #f8f8f8;">
-  <h2 style="text-align:center; font-size:2rem; margin-bottom:2rem;">Let’s Talk</h2>
-  <form action="https://formspree.io/f/myzellok" method="POST" class="contact-form">
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send →</button>
-  </form>
-</section>
-
-<!-- ✅ Footer -->
-<footer>
-  <img src="logo.png" alt="Tipple Works Logo" style="height: 50px; margin-bottom: 1.5rem;" />
-  <div style="margin-bottom: 1.5rem;">
-    <a href="#top">Home</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="https://www.instagram.com/tippleworksco/" target="_blank">Instagram</a>
-  </div>
-  <p style="font-size: 0.9rem; color: #aaa;">© 2024 Tipple Works Co. All rights reserved.</p>
-</footer>
+<section class="slide"><img src="slide3.jpg" alt="Slide 3" loading="lazy" /></section>
+<section class="slide"><img src="slide4.jpg" alt="Slide 4" loading="lazy" /></section>
+<section class="slide"><img src="slide5.jpg" alt="Slide 5" loading="lazy" /></section>
+<section class="slide"><img src="slide6.jpg" alt="Slide 6" loading="lazy" /></section>
+<section class="slide"><img src="slide7.jpg" alt="Slide 7" loading="lazy" /></section>
+<section class="slide"><img src="slide8.jpg" alt="Slide 8" loading="lazy" /></section>
+<section class="slide"><img src="slide9.jpg" alt="Slide 9" loading="lazy" /></section>
+<section class="slide"><img src="slide10.jpg" alt="Slide 10" loading="lazy" /></section>
+<section class="slide"><img src="slide11.jpg" alt="Slide 11" loading="lazy" /></section>
+<section class="slide"><img src="slide12.jpg" alt="Slide 12" loading="lazy" /></section>
+<section class="slide"><img src="slide13.jpg" alt="Slide 13" loading="lazy" /></section>
+<section class="slide"><img src="slide14.jpg" alt="Slide 14" loading="lazy" /></section>
+<section class="slide"><img src="slide15.jpg" alt="Slide 15" loading="lazy" /></section>
+<section class="slide"><img src="slide16.jpg" alt="Slide 16" loading="lazy" /></section>
+<section class="slide"><img src="slide17.jpg" alt="Slide 17" loading="lazy" /></section>
+<section class="slide"><img src="slide18.jpg" alt="Slide 18" loading="lazy" /></section>
+<section class="slide"><img src="slide19.jpg" alt="Slide 19" loading="lazy" /></section>
+<section class="slide"><img src="slide20.jpg" alt="Slide 20" loading="lazy" /></section>
+<section class="slide"><img src="slide21.jpg" alt="Slide 21" loading="lazy" /></section>
+<section class="slide"><img src="slide22.jpg" alt="Slide 22" loading="lazy" /></section>
+<section class="slide"><img src="slide23.jpg" alt="Slide 23" loading="lazy" /></section>
+<section class="slide"><img src="slide24.jpg" alt="Slide 24" loading="lazy" /></section>
+<section class="slide"><img src="slide25.jpg" alt="Slide 25" loading="lazy" /></section>
+<section class="slide"><img src="slide26.jpg" alt="Slide 26" loading="lazy" /></section>
+<section class="slide"><img src="slide27.jpg" alt="Slide 27" loading="lazy" /></section>
+<section class="slide"><img src="slide28.jpg" alt="Slide 28" loading="lazy" /></section>
+<section class="slide"><img src="slide29.jpg" alt="Slide 29" loading="lazy" /></section>
+<section class="slide"><img src="slide30.jpg" alt="Slide 30" loading="lazy" /></section>
+<section class="slide"><img src="slide31.jpg" alt="Slide 31" loading="lazy" /></section>
+<section class="slide"><img src="slide32.jpg" alt="Slide 32" loading="lazy" /></section>
+<section class="slide"><img src="slide33.jpg" alt="Slide 33" loading="lazy" /></section>
 
 <!-- ✅ Floating Buttons -->
-<a href="mailto:rohan.dhirwani@tippleworks.com" class="cta">Let’s Create →</a>
-<a href="#top" class="back-to-top">↑ Top</a>
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohan.dhirwani@tippleworks.com" class="cta" target="_blank">Let’s Create →</a>
 <a class="instagram-btn" href="https://www.instagram.com/tippleworksco/" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
 </a>
+<a href="#top" class="back-to-top">↑ Top</a>
 
 <!-- ✅ Scroll Animations -->
 <script>
@@ -233,6 +147,9 @@
   }, { threshold: 0.1 });
 
   slides.forEach(slide => {
+    slide.style.opacity = 0;
+    slide.style.transform = 'translateY(30px)';
+    slide.style.transition = 'all 0.6s ease-out';
     observer.observe(slide);
   });
 </script>
