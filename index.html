@@ -143,61 +143,120 @@
   <a href="https://drive.google.com/drive/folders/1k_IXMx8JI1lqzwOKYDw_hAiuGj9oqvKV" target="_blank">Portfolio</a>
 </section>
 
-<!-- ✅ Services Grid - Modern & Styled -->
-<section id="services" style="padding: 4rem 2rem; background: #fff;">
+<<!-- ✅ Animated Number Services Section -->
+<section id="services" style="padding: 4rem 2rem; background: #fff; font-family: 'Segoe UI', sans-serif;">
   <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 3rem; color: #000; font-weight: 700;">What We Do</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
-
-    <div style="flex: 1 1 300px; background: #000; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-      <h3 style="color: #f6c301; font-size: 1.75rem; margin-bottom: 1rem;">1. CREATIVE DESIGN</h3>
-      <p style="font-size: 1rem; line-height: 1.6;">
-        We craft identity, design standout packaging,<br />
-        and create visual stories that leave a mark.
-      </p>
+  <div class="service-grid">
+    <div class="service-block" style="animation-delay: 0s;">
+      <h3><span class="num">1</span> Creative Design</h3>
+      <p>We craft identity, design standout packaging,<br>and create visual stories that leave a mark.</p>
     </div>
-
-    <div style="flex: 1 1 300px; background: #000; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-      <h3 style="color: #f6c301; font-size: 1.75rem; margin-bottom: 1rem;">2. SOCIAL MEDIA</h3>
-      <p style="font-size: 1rem; line-height: 1.6;">
-        Reels, posts & strategy – we help your brand<br />
-        shine across every social platform.
-      </p>
+    <div class="service-block" style="animation-delay: 0.2s;">
+      <h3><span class="num">2</span> Social Media</h3>
+      <p>Reels, posts & strategy – we help your brand<br>shine across every social platform.</p>
     </div>
-
-    <div style="flex: 1 1 300px; background: #000; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-      <h3 style="color: #f6c301; font-size: 1.75rem; margin-bottom: 1rem;">3. CONTENT CREATION</h3>
-      <p style="font-size: 1rem; line-height: 1.6;">
-        Photos, videos, studio magic – our content<br />
-        brings your brand story to life.
-      </p>
+    <div class="service-block" style="animation-delay: 0.4s;">
+      <h3><span class="num">3</span> Content Creation</h3>
+      <p>Photos, videos, studio magic – our content<br>brings your brand story to life.</p>
     </div>
-
-    <div style="flex: 1 1 300px; background: #000; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-      <h3 style="color: #f6c301; font-size: 1.75rem; margin-bottom: 1rem;">4. DIGITAL MARKETING</h3>
-      <p style="font-size: 1rem; line-height: 1.6;">
-        Performance ads & eComm growth strategies<br />
-        for maximum impact and ROI.
-      </p>
+    <div class="service-block" style="animation-delay: 0.6s;">
+      <h3><span class="num">4</span> Digital Marketing</h3>
+      <p>Performance ads & eComm growth strategies<br>for maximum impact and ROI.</p>
     </div>
-
-    <div style="flex: 1 1 300px; background: #000; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-      <h3 style="color: #f6c301; font-size: 1.75rem; margin-bottom: 1rem;">5. EVENT SERVICES</h3>
-      <p style="font-size: 1rem; line-height: 1.6;">
-        From logistics to immersive experiences,<br />
-        we bring your events to life seamlessly.
-      </p>
+    <div class="service-block" style="animation-delay: 0.8s;">
+      <h3><span class="num">5</span> Event Services</h3>
+      <p>From logistics to immersive experiences,<br>we bring your events to life seamlessly.</p>
     </div>
-
-    <div style="flex: 1 1 300px; background: #000; color: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-      <h3 style="color: #f6c301; font-size: 1.75rem; margin-bottom: 1rem;">6. HOSPITALITY SERVICES</h3>
-      <p style="font-size: 1rem; line-height: 1.6;">
-        From menus to marketing, we shape<br />
-        hospitality brands to stand out.
-      </p>
+    <div class="service-block" style="animation-delay: 1s;">
+      <h3><span class="num">6</span> Hospitality Services</h3>
+      <p>From menus to marketing, we shape<br>hospitality brands to stand out.</p>
     </div>
-
   </div>
 </section>
+
+<style>
+  .service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .service-block {
+    flex: 1 1 300px;
+    background: #111;
+    color: #fff;
+    padding: 2.2rem;
+    border-radius: 18px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 0.8s forwards;
+  }
+
+  .service-block:hover {
+    background: #f6c301;
+    color: #000;
+    transform: scale(1.03);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  .service-block h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .service-block:hover h3 {
+    color: #000;
+  }
+
+  .service-block h3 .num {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f6c301;
+    animation: bounceIn 1s ease-in-out;
+    min-width: 30px;
+  }
+
+  .service-block:hover h3 .num {
+    color: #000;
+  }
+
+  .service-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+
+  @media (max-width: 768px) {
+    .service-block {
+      flex: 1 1 100%;
+    }
+  }
+</style>
 
 
 <!-- ✅ Clients Section -->
