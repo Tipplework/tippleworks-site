@@ -126,6 +126,9 @@
 </head>
 <body>
 
+<!-- Anchor for Home -->
+<div id="top"></div>
+
 <!-- ✅ Hero Section -->
 <section class="hero">
   <h1>We Make Alcohol Brands Unmissable</h1>
@@ -133,39 +136,34 @@
   <a href="#contact">Let's Collaborate</a>
 </section>
 
-<!-- ✅ Services Section -->
+<!-- ✅ Services Grid -->
 <section id="services" style="padding: 4rem 2rem; background: #fff;">
   <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2.5rem;">What We Do</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1100px; margin: 0 auto;">
-
     <div style="flex: 1 1 250px; background: #000; color: #fff; padding: 2rem; border-radius: 10px; transition: 0.3s ease; cursor: pointer;"
          onmouseover="this.style.background='#f6c301'; this.style.color='#000';"
          onmouseout="this.style.background='#000'; this.style.color='#fff';">
       <h3 style="margin-bottom: 0.5rem;">Brand Strategy</h3>
       <p style="font-size: 0.95rem;">Positioning, tone of voice, identity & messaging for alcohol brands.</p>
     </div>
-
     <div style="flex: 1 1 250px; background: #000; color: #fff; padding: 2rem; border-radius: 10px; transition: 0.3s ease; cursor: pointer;"
          onmouseover="this.style.background='#f6c301'; this.style.color='#000';"
          onmouseout="this.style.background='#000'; this.style.color='#fff';">
       <h3 style="margin-bottom: 0.5rem;">Social Media</h3>
       <p style="font-size: 0.95rem;">Reels, grid posts, campaigns, and strategy with consistent brand tone.</p>
     </div>
-
     <div style="flex: 1 1 250px; background: #000; color: #fff; padding: 2rem; border-radius: 10px; transition: 0.3s ease; cursor: pointer;"
          onmouseover="this.style.background='#f6c301'; this.style.color='#000';"
          onmouseout="this.style.background='#000'; this.style.color='#fff';">
       <h3 style="margin-bottom: 0.5rem;">Packaging & Design</h3>
       <p style="font-size: 0.95rem;">Bottle labels, packs, shelf-ready creative for modern alcohol brands.</p>
     </div>
-
     <div style="flex: 1 1 250px; background: #000; color: #fff; padding: 2rem; border-radius: 10px; transition: 0.3s ease; cursor: pointer;"
          onmouseover="this.style.background='#f6c301'; this.style.color='#000';"
          onmouseout="this.style.background='#000'; this.style.color='#fff';">
       <h3 style="margin-bottom: 0.5rem;">Performance Marketing</h3>
       <p style="font-size: 0.95rem;">Meta, Google, influencer & remarketing ads with end-to-end funnel design.</p>
     </div>
-
   </div>
 </section>
 
@@ -200,18 +198,16 @@
   </div>
 </section>
 
-<!-- ✅ Deck Slides (start from Slide 3) -->
+<!-- ✅ Slides (continue from slide3 to slide33) -->
 <section class="slide"><img src="slide3.jpg" alt="Slide 3" loading="lazy" /></section>
-<section class="slide"><img src="slide4.jpg" alt="Slide 4" loading="lazy" /></section>
-<!-- ... repeat till slide33.jpg -->
-<section class="slide"><img src="slide33.jpg" alt="Slide 33" loading="lazy" /></section>
+<!-- Repeat slide4.jpg to slide33.jpg -->
 
 <!-- ✅ Floating Buttons -->
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rohan.dhirwani@tippleworks.com" class="cta" target="_blank">Let’s Create →</a>
 <a class="instagram-btn" href="https://www.instagram.com/tippleworksco/" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
 </a>
-<a href="#" class="back-to-top">↑ Top</a>
+<a href="#top" class="back-to-top">↑ Top</a>
 
 <!-- ✅ Scroll Animations -->
 <script>
@@ -234,12 +230,10 @@
 <section id="contact" style="padding: 2rem; background: #f8f8f8;">
   <h2 style="margin-bottom: 1rem;">Let’s Talk</h2>
   <form action="https://formspree.io/f/myzellok" method="POST" style="max-width: 500px;">
-    <label>
-      Your email:<br>
+    <label>Your email:<br>
       <input type="email" name="email" required style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;">
     </label><br>
-    <label>
-      Your message:<br>
+    <label>Your message:<br>
       <textarea name="message" required style="width: 100%; height: 150px; padding: 0.5rem;"></textarea>
     </label><br>
     <button type="submit" style="margin-top: 1rem; background: black; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px;">
@@ -247,6 +241,19 @@
     </button>
   </form>
 </section>
+
+<!-- ✅ Final Footer -->
+<footer style="background: #000; color: #fff; padding: 3rem 2rem; text-align: center;">
+  <img src="logo.png" alt="Tipple Works Logo" style="height: 50px; margin-bottom: 1.5rem;" />
+  <div style="margin-bottom: 1.5rem;">
+    <a href="#top" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Home</a>
+    <a href="#services" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Services</a>
+    <a href="#clients" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Clients</a>
+    <a href="#contact" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Contact</a>
+    <a href="https://www.instagram.com/tippleworksco/" target="_blank" style="color: #fff; text-decoration: none; margin: 0 15px;" onmouseover="this.style.color='#f6c301'" onmouseout="this.style.color='#fff'">Instagram</a>
+  </div>
+  <p style="font-size: 0.9rem; color: #aaa;">© 2024 Tipple Works Co. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
