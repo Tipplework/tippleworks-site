@@ -27,7 +27,7 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; }
+    body { font-family: sans-serif; background: #fff; color: #111; overflow-x: hidden; scroll-behavior: smooth; }
 
     .slide {
       margin-bottom: 2rem;
@@ -57,7 +57,7 @@
       z-index: 1000;
     }
 
-    .cta:hover { background: #444; }
+    .cta:hover { background: #333; }
 
     .back-to-top {
       position: fixed;
@@ -87,12 +87,53 @@
       width: 40px;
       height: 40px;
     }
+
+    .hero {
+      background: #000;
+      color: #fff;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .hero a {
+      background: #f6c301;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      transition: 0.3s ease;
+    }
+
+    .hero a:hover {
+      background: #ffc800;
+    }
   </style>
 </head>
 <body>
 
-<!-- Slides -->
-<section class="slide"><img src="slide1.jpg" alt="Slide 1" loading="lazy" /></section>
+<!-- ✅ Hero Section Replaces Slide 1 -->
+<section class="hero">
+  <h1>We Make Alcohol Brands Unmissable</h1>
+  <p>From strategy to sizzle, Tipple Works builds alcohol brands that get people talking. Packaging, content, strategy, and experiences that pour creativity into every sip.</p>
+  <a href="#contact">Let's Collaborate</a>
+</section>
+
+<!-- ✅ Slides from slide2 onwards -->
 <section class="slide"><img src="slide2.jpg" alt="Slide 2" loading="lazy" /></section>
 <section class="slide"><img src="slide3.jpg" alt="Slide 3" loading="lazy" /></section>
 <section class="slide"><img src="slide4.jpg" alt="Slide 4" loading="lazy" /></section>
