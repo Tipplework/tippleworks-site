@@ -179,43 +179,50 @@
   <a href="https://drive.google.com/drive/folders/1k_IXMx8JI1lqzwOKYDw_hAiuGj9oqvKV" target="_blank">Portfolio</a>
 </section>
 
-<section id="services" style="padding: 4rem 2rem; background: #fff;">
-  <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2rem;">What We Do</h2>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-button">1. Creative Design</button>
-      <div class="accordion-content">
-        <p>We craft identity, design standout packaging,<br>and create visual stories that leave a mark.</p>
+<section id="services" class="services-section">
+  <div class="services-header">
+    <h2>What We Do</h2>
+  </div>
+  <div class="services-list">
+    <div class="service-item">
+      <button class="service-toggle">1. Creative Design</button>
+      <div class="service-content">
+        <p>We craft identity, design standout packaging, and create visual stories that leave a mark.</p>
       </div>
     </div>
-    <div class="accordion-item">
-      <button class="accordion-button">2. Social Media</button>
-      <div class="accordion-content">
-        <p>Reels, posts & strategy — we help your brand shine across every social platform.</p>
+
+    <div class="service-item">
+      <button class="service-toggle">2. Social Media</button>
+      <div class="service-content">
+        <p>Reels, posts & strategy – we help your brand shine across every social platform.</p>
       </div>
     </div>
-    <div class="accordion-item">
-      <button class="accordion-button">3. Content Creation</button>
-      <div class="accordion-content">
-        <p>Photos, videos, studio magic — our content brings your brand story to life.</p>
+
+    <div class="service-item">
+      <button class="service-toggle">3. Content Creation</button>
+      <div class="service-content">
+        <p>Photos, videos, studio magic – our content brings your brand story to life.</p>
       </div>
     </div>
-    <div class="accordion-item">
-      <button class="accordion-button">4. Digital Marketing</button>
-      <div class="accordion-content">
+
+    <div class="service-item">
+      <button class="service-toggle">4. Digital Marketing</button>
+      <div class="service-content">
         <p>Performance ads & eComm growth strategies for maximum impact and ROI.</p>
       </div>
     </div>
-    <div class="accordion-item">
-      <button class="accordion-button">5. Event Services</button>
-      <div class="accordion-content">
+
+    <div class="service-item">
+      <button class="service-toggle">5. Event Services</button>
+      <div class="service-content">
         <p>From logistics to immersive experiences, we bring your events to life seamlessly.</p>
       </div>
     </div>
-    <div class="accordion-item">
-      <button class="accordion-button">6. Hospitality Services</button>
-      <div class="accordion-content">
-        <p>From menus to marketing, we shape hospitality brands to stand out.</p>
+
+    <div class="service-item">
+      <button class="service-toggle">6. Hospitality Services</button>
+      <div class="service-content">
+        <p>From menus to marketing, we specialize in making hospitality brands stand out.</p>
       </div>
     </div>
   </div>
@@ -261,8 +268,72 @@
   max-height: 300px;
   padding: 1rem;
 }
-</style>
 
+<style>
+  /* Existing styles */
+
+  /* 👇 Paste accordion styles below this line */
+  .services-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .services-header h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+
+  .service-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 600;
+    padding: 1rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+
+  .service-toggle::after {
+    content: "▾";
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .service-toggle.active::after {
+    transform: rotate(180deg);
+  }
+
+  .service-content {
+    display: none;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .service-content.open {
+    display: block;
+  }
+</style>
 
 <!-- ✅ Clients Section -->
 <section id="clients" style="padding: 4rem 2rem; background: #fafafa;">
@@ -375,6 +446,16 @@
 
       // Toggle current item
       item.classList.toggle('active');
+    });
+  });
+</script>
+<script>
+  const toggles = document.querySelectorAll('.service-toggle');
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      toggle.classList.toggle('active');
+      content.classList.toggle('open');
     });
   });
 </script>
